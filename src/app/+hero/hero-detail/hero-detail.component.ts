@@ -26,11 +26,9 @@ export class HeroDetailComponent implements OnInit, OnDestroy {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         this.id = params['id'];
-        console.log(this.id);
         this.hero = this.service.getHero(this.id);
-        console.log(this.hero);
-        if (typeof this.hero == "undefined" || this.hero == null) {
-          this.router.navigate(['not-found']);
+        if (typeof this.hero === "undefined" || this.hero == null) {
+          this.router.navigate(['hero/not-found']);
         }
       }
     );
