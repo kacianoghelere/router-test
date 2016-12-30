@@ -1,3 +1,15 @@
 <h1>
   {{title}}
 </h1>
+
+<header>
+  <ul class="menu">
+    <li><a [routerLink]="['home']">Home</a></li>
+    <li><a [routerLink]="['home/about']">About</a></li>
+    <li><a [routerLink]="['home/contact']">Contact</a></li>
+  </ul>
+</header>
+
+<section>
+  <router-outlet></router-outlet>
+</section>
