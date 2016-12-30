@@ -1,13 +1,18 @@
-<h1>
-  {{title}}
-</h1>
-
 <header>
-  <ul class="menu">
-    <li><a [routerLink]="['home']">Home</a></li>
-    <li><a [routerLink]="['home/about']">About</a></li>
-    <li><a [routerLink]="['home/contact']">Contact</a></li>
-  </ul>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" [routerLink]="['/home']">{{title}}</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/home']">Home</a></li>
+        <li><a [routerLink]="['/home/about']">About</a></li>
+        <li><a [routerLink]="['/home/contact']">Contact</a></li>
+        <li><a [routerLink]="['/hero']">Heroes</a></li>
+        <li><a [routerLink]="['hero/not-found']">Hero not found!</a></li>
+      </ul>
+    </div>
+  </nav>
 </header>
 
 <section>

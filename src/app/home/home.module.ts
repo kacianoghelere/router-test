@@ -13,17 +13,15 @@ import { HomeAboutComponent } from './home-about/home-about.component';
     HomeRoutingModule
   ],
   declarations: [
-    HomeAboutComponent,
-    HomeContactComponent,
     HomeComponent,
-    HomeContactComponent,
-    HomeAboutComponent
+    HomeAboutComponent,
+    HomeContactComponent
   ],
   providers: [ HomeService ],
   exports: [
+    HomeComponent,
     HomeAboutComponent,
-    HomeContactComponent,
-    HomeComponent
+    HomeContactComponent
   ]
 })
 export class HomeModule { }

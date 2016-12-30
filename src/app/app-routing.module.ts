@@ -6,7 +6,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeModule } from './home/home.module';
 
 const appRoutes: Routes = [
-  { path: "", component: WelcomeComponent }
+  { path: "", component: WelcomeComponent },
+  {
+    path: 'hero',
+    loadChildren: 'app/+hero/hero.module#HeroModule'
+  }
 ];
 
 @NgModule({

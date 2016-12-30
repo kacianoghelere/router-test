@@ -20,6 +20,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppComponent,
     WelcomeComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
