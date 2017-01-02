@@ -27,14 +27,17 @@ export class HeroDetailComponent implements OnInit, OnDestroy {
       (params: any) => {
         this.id = params['id'];
         this.hero = this.service.getHero(this.id);
-        if (typeof this.hero === "undefined" || this.hero == null) {
-          this.router.navigate(['hero/not-found']);
-        }
+        if (!this.hero) this.notFound();
       }
     );
   }
 
   ngOnDestroy(){
     this.subscription.unsubscribe();
+  }
+
+  notFound() {
+    console.log("Not found!");
+    this.router.navigate(["/hero/not-found"]);
   }
 }
